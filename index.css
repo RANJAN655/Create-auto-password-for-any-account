@@ -1,0 +1,214 @@
+/* Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Body Styling */
+body {
+  background: linear-gradient(135deg, #1e1e2f, #2f2f44);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Container Box */
+.container {
+  background-color: #2a2d4e;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+  max-width: 400px;
+  width: 100%;
+  animation: fadeIn 1s ease;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 26px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: slideDown 1s ease-in-out;
+}
+
+/* Display Password Box */
+.display-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  animation: slideLeft 0.8s ease;
+}
+
+.display-container input {
+  flex-grow: 1;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #3b3f5c;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  outline: none;
+}
+
+.display-container button {
+  background-color: #444c66;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.display-container button:hover {
+  background-color: #666d91;
+}
+
+/* Input Section */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Length Section */
+.length-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: -8px;
+}
+
+/* Custom Slider */
+.slider {
+  /* -webkit-appearance: none; */
+  width: 100%;
+  height: 6px;
+  background: #00b894;
+  border-radius: 6px;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  border: 2px solid #00b894;
+  box-shadow: 0 0 5px #00b894;
+  transition: transform 0.3s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 8px;
+}
+
+label {
+  font-size: 15px;
+  user-select: none;
+}
+
+/* Strength Bar */
+.strength-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+[data-indicator] {
+  width: 20px;
+  height: 20px;
+  background-color: grey;
+  border-radius: 50%;
+  box-shadow: 0 0 10px grey;
+  animation: pulse 2s infinite;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Generate Button */
+.generateButton {
+  padding: 14px;
+  font-size: 16px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.generateButton:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 114, 255, 0.4);
+}
+
+/* Copy Message */
+.Active {
+  color: #00ff9d;
+  font-size: 14px;
+  margin-top: 4px;
+  animation: fadeIn 0.5s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(0, 255, 128, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 255, 128, 0.9);
+  }
+}

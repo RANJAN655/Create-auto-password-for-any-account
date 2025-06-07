@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Password generater </h1>
+        
+        <div class="display-container">
+            <input readonly placeholder="Generate Password...." class="Password" data-passwordDisplay>
+            <button data-copy>
+                <span data-copyMsg></span>
+                <img src="copy.svg" alt="copy" height="23" width="23">
+            </button>
+        </div>
+
+
+        <div class="input-container">
+            <!-- password length section -->
+            <div class="length-container">
+                <p>Password length</p>
+                <p data-lengthNumber>0</p>
+            </div>
+            <!-- slider container -->
+            <input type="range" min="0" max="20" class="slider" step="1" data-lengthSlider>
+
+
+            <!-- check box -->
+             <div>
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">include uppercase letter</label>
+                
+             </div>
+             <div>
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">include lowercase letter</label>
+                
+             </div>
+             <div>
+                <input type="checkbox" id="numbers">
+                <label for="numbers">include number</label>
+                
+             </div>
+             <div>
+                <input type="checkbox" id="symbols">
+                <label for="symbols">include Symbole</label>
+                
+             </div>
+
+             <!-- strength tag -->
+              <div class="strength-container">
+                <p>strength</p>
+                <div data-indicator></div>
+
+              </div>
+
+              <!-- generator container -->
+               <div>
+                <button class="generateButton">
+                    generate password
+                </button>
+               </div>
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+    
+    <script src="index.js"></script>
+     <!-- <script src="script.js"></script> -->
+    
+</body>
+</html>
